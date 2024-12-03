@@ -12,7 +12,8 @@
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  position: fixed;
+  position: sticky;
+  top:0px;
   box-shadow:0 2px 5px 2px rgb(188, 183, 183);
 }
 .logo img {
@@ -31,18 +32,23 @@
   font-size: 16px;
   font-weight: 600;
 }
-.nav-contain a {
+.nav-contain a{
+  display:inline-flex;
   color: rgb(79, 78, 78);
   text-decoration: none;
-  transition: color 0.3s, text-underline-offset 0.3s;
+  transition: color 0.3s, text-underline-offset 0.3s ease;
   cursor: pointer;
 }
-.nav-contain a:hover {
+.nav-contain a:hover
+ {
   color: #088178;
   text-decoration: underline 2px;
   text-underline-offset: 5px;
 }
-/* poster */
+.select
+{
+  color: #088178;
+}
 .poster
 {
     background-image: url(./images/home/model.png);
@@ -119,4 +125,53 @@
     color: #088178;
     font-size: 22px ;
     
+}
+/* our services */
+.container{
+  
+  background-color:white;
+  height: 200px;
+  width:  100%;
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  flex-direction:row;
+  align-items: center;
+  align-content:space-between;
+  gap: 50px;
+  flex-wrap:wrap;
+
+}
+.item
+{
+border: 2px solid rgba(128, 128, 128, 0.281);
+height: 180px;
+width: 180px;
+border-radius: 10px;
+background-color:white;
+display: flex;
+align-items: center;
+justify-content: center;
+flex-direction: column;
+}
+
+
+.item button{
+   display: inline-block;
+   display: flex;
+   font-size: 14px;
+   border: 1px solid rgba(109, 103, 103, 0.317);
+   width: 100px;
+   height: 20px;
+   border-radius: 6px;
+   background-color: #41f5e954;
+   font-weight: 600;
+   color:  #088178;
+   box-shadow:20px 20px 34px rgba(0, 0, 0, 0.03); 
+   transition: box-shadow 0.3s;
+   margin-top:20px ;
+}
+.item:hover
+{
+  box-shadow: 10px 10px 54px #72e0d9;
 }
